@@ -5,7 +5,7 @@ int main(){
     if(a>b){
         printf("10%d",a,b);
     }
-    else{
+    else if(b>a){
         printf("15%d",a,b);
     }
     return 0;
