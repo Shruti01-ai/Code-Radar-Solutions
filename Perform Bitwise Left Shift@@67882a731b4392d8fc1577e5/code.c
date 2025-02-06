@@ -1,7 +1,9 @@
 #include <stdio.h>
 int main(){
-    int a,shift;
-    scanf("%d%d",&a,&shift);
-    printf("%d\n",a<<shift);
+    int a;
+    scanf("%d",&a);
+    int result = (a << 1 || a << 2 );
+    
+    printf("%d",result);
     return 0;
 }
