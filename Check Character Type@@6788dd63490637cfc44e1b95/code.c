@@ -13,7 +13,7 @@ int main() {
         }
     }
 
-    else if (ch>='0' && ch<=9) {
+    else if (ch>='0' && ch<='9') {
         printf("Digit\n");
     }
     
