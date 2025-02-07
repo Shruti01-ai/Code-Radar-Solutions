@@ -4,8 +4,6 @@
 int main() {
     char ch;
 
-    
-    printf("Enter a character: ");
     scanf("%c", &ch);
 
         if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
@@ -15,7 +13,7 @@ int main() {
         }
     }
 
-    else if (isdigit(ch)) {
+    else if (ch>='0' && ch<=9) {
         printf("Digit\n");
     }
     
