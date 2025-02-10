@@ -2,10 +2,10 @@
 int main(){
     char a,b,c;
     scanf("%c%c%c",&a,&b,&c);
-    if(a==b && b==c && c==a){
+    if(a==b && b==c && a==c){
         printf("Equilateral");
     }
-    else if(a==b || b==c || c==a){
+    else if(a==b || b==c || a==c){
         printf("Isosceles");
     }
     else{
