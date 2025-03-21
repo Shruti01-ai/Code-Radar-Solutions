@@ -13,7 +13,7 @@ void bubbleSort(int arr[], int n) {
     }
 }
 
-void printfArray(int arr[], int n) {
+int printfArray(int arr[], int n) {
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
