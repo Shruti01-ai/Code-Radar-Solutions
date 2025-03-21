@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h> // Include stdlib.h for malloc and free
 
 // Function to implement Bubble Sort
 void bubbleSort(int arr[], int n) {
@@ -26,13 +27,21 @@ int main() {
     int n;
     scanf("%d", &n); // Read number of elements
 
-    int arr[n]; // Declare array
+    int *arr = (int*)malloc(n * sizeof(int)); // Allocate memory dynamically
+
+    if (arr == NULL) { // check for memory allocation failure.
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]); // Read array elements
     }
 
     bubbleSort(arr, n); // Sort array
     printArray(arr, n); // Print sorted array
+
+    free(arr); // Free allocated memory
 
     return 0;
 }
