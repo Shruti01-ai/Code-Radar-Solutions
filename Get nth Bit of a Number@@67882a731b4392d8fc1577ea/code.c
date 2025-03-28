@@ -2,14 +2,9 @@
 
 int main() {
     int num, n;
-    scanf("%d %d", &num, &n); // Read the number and bit position
+    scanf("%d %d", &num, &n);  // Read input
 
-    // Extract the nth bit using bitwise AND
-    int bit_value = (num >> n) & 1;
-
-    // Print input and output format
-    printf("%d\n", num, n);
-    printf("%d\n", bit_value);
+    printf("%d\n", (num >> n) & 1); // Get nth bit and print
 
     return 0;
 }
