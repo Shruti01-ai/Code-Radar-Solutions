@@ -4,9 +4,7 @@ int main() {
     int N;
     scanf("%d", &N);  // Read the number of rows
 
-    printf("Input\n%d\n\n", N);  // Print the input section
-    printf("Output\n");  // Print the output section
-
+    
     for (int i = 1; i <= N; i++) {
         // Print leading spaces for center alignment
         for (int s = 1; s <= N - i; s++) {
