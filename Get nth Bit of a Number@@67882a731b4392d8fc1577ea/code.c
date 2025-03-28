@@ -8,7 +8,7 @@ int main() {
     int bit_value = (num >> n) & 1;
 
     // Print input and output format
-    printf("Input\n%d %d\n\n", num, n);
+    printf("%d\n", num, n);
     printf("Output\n%d\n", bit_value);
 
     return 0;
