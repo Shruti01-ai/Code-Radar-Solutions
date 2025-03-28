@@ -9,7 +9,7 @@ int main() {
 
     // Print input and output format
     printf("%d\n", num, n);
-    printf("Output\n%d\n", bit_value);
+    printf("%d\n", bit_value);
 
     return 0;
 }
