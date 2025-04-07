@@ -16,6 +16,6 @@ int main(){
     if(a[0]<=p)
     printf("Sorted");
     else
-    printf("Not Sorted")
+    printf("Not Sorted");
   
 }
