@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h> // For INT_MIN
 
 int main() {
     int n, i;
@@ -25,21 +26,26 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    int largest = arr[0];
-    int secondLargest = -1; // Initialize to -1 as per the problem statement
+    int largest = INT_MIN;
+    int secondLargest = INT_MIN;
 
     // Find the largest and second largest elements
-    for (i = 1; i < n; i++) {
+    for (i = 0; i < n; i++) {
         if (arr[i] > largest) {
             secondLargest = largest;
             largest = arr[i];
-        } else if (arr[i] < largest && arr[i] > secondLargest) {
+        } else if (arr[i] > secondLargest && arr[i] < largest) {
             secondLargest = arr[i];
         }
     }
 
-    // Output the second largest element
-    printf("%d\n", secondLargest);
+    // Handle the case where all elements are the same
+    if (secondLargest == INT_MIN) {
+        printf("-1\n");
+    } else {
+        // Output the second largest element
+        printf("%d\n", secondLargest);
+    }
 
     // Free the allocated memory
     free(arr);
