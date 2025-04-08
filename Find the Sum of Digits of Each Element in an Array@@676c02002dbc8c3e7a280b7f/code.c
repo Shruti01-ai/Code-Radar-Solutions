@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to calculate the sum of digits of a number
+// Function to calculate the sum of the absolute values of digits of a number
 int sumOfDigits(int num) {
     int sum = 0;
     while (num != 0) {
-        sum += num % 10;
+        sum += abs(num % 10); // Take the absolute value of the digit
         num /= 10;
     }
     return sum;
@@ -14,7 +14,7 @@ int sumOfDigits(int num) {
 int main() {
     int n;
 
-    // Read the size of the array
+    // Read the size of the array (in this case, it's 2 based on the input)
     if (scanf("%d", &n) != 1 || n <= 0) {
         fprintf(stderr, "Invalid array size.\n");
         return 1;
