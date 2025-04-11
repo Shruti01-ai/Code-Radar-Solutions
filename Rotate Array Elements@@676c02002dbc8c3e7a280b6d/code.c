@@ -51,7 +51,7 @@ int main() {
     rotateArray(arr1, n1, k1);
     printf("Output for Sample Test Case 1:\n");
     for (int i = 0; i < n1; i++) {
-        printf("%d\n", arr1[i]);
+        printf("%d", arr1[i]);
     }
     printf("\n");
 
